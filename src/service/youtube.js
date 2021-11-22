@@ -2,7 +2,6 @@ class Youtube {
   constructor(httpClient) {
     this.youtube = httpClient;
   }
-
   async mostPopular() {
     const response = await this.youtube.get('videos', {
       params: {
