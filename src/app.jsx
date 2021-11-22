@@ -16,15 +16,16 @@ function App({ youtube }) {
     query => {
       setSelectedVideo(null);
       youtube
-        .search(query) //
+        .search(query) 
         .then(videos => setVideos(videos));
     },
     [youtube]
   );
 
   useEffect(() => {
+    console.log("????");
     youtube
-      .mostPopular() //
+      .mostPopular() 
       .then(videos => setVideos(videos));
   }, [youtube]);
   return (
